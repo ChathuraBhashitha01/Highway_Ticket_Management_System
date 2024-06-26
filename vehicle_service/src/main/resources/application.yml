@@ -1,5 +1,5 @@
 spring:
   application:
-    name: VEHICLE-SERViCE
+    name: VEHICLE-SERVICE
   config:
-    import: "optional:configserver:http://localhost:8084"
+    import: "optional:configserver:http://localhost:8089"

@@ -3,13 +3,15 @@ package lk.ijse.gdse.microservices.vehicle_service;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @EnableDiscoveryClient
 @RequestMapping("/api/v1/vehicles")
 public class VehicleController {
 
     @GetMapping("/getVehicles")
-    public VehicleDTO getVehicleDetails() {
+    public List<VehicleDTO> getVehicleDetails() {
         return null;
     }
 
@@ -18,7 +20,7 @@ public class VehicleController {
 
     }
 
-    @PostMapping("/updateVehicle")
+    @PatchMapping("/updateVehicle")
     public void   updateVehicle(@RequestBody VehicleDTO vehicleDTO) {
 
     }
