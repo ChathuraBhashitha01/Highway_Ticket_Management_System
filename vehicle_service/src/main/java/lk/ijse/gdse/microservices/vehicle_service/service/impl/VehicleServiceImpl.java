@@ -31,7 +31,6 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public void updateVehicle(VehicleDTO vehicleDTO) {
-        Vehicle vehicle = modelMapper.map(vehicleDTO,Vehicle.class);
-        vehicleRepo.save(vehicle);
+        vehicleRepo.save(modelMapper.map(vehicleDTO,Vehicle.class));
     }
 }

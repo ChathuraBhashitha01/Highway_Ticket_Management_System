@@ -25,6 +25,7 @@ public class VehicleController {
     @PostMapping(value = "/registerVehicle",consumes = MediaType.APPLICATION_JSON_VALUE)
     public void   registerVehicle(@RequestBody VehicleDTO vehicleDTO) {
         vehicleService.registerVehicle(vehicleDTO);
+        System.out.println("registerVehicle"    + vehicleDTO);
     }
 
     @PatchMapping(value = "/updateVehicle",consumes = MediaType.APPLICATION_JSON_VALUE)
