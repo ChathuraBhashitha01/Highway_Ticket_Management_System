@@ -1,5 +1,6 @@
-package lk.ijse.gdse.microservices.user_service;
+package lk.ijse.gdse.microservices.user_service.controller;
 
+import lk.ijse.gdse.microservices.user_service.dto.UserDTO;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
