@@ -23,12 +23,12 @@ public class UserController {
     }
 
     @PostMapping
-    public void registerUser(UserDTO userDTO) {
+    public void registerUser(@RequestBody UserDTO userDTO) {
         userService.registerUser(userDTO);
     }
 
     @PatchMapping
-    public void updateUser(UserDTO userDTO) {
+    public void updateUser(@RequestBody UserDTO userDTO) {
         userService.updateUser(userDTO);
     }
 
