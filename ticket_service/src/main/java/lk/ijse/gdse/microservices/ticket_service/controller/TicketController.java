@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @EnableDiscoveryClient
-@RequestMapping("/api/v1/9tickets")
+@RequestMapping("/api/v1/tickets")
 public class TicketController {
 
     @Autowired
@@ -22,12 +22,12 @@ public class TicketController {
     }
 
     @PostMapping
-    public void saveTicketDetails(TicketDTO ticketDTO) {
+    public void saveTicketDetails(@RequestBody TicketDTO ticketDTO) {
         ticketService.addTicket(ticketDTO);
     }
 
     @PatchMapping
-    public void updateTicketDetails(TicketDTO ticketDTO) {
+    public void updateTicketDetails(@RequestBody TicketDTO ticketDTO) {
         ticketService.updateTicket(ticketDTO);
     }
 }
