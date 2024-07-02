@@ -20,6 +20,10 @@ public class Ticket {
     private int ticket_no;
     private String vehicle_registration_number;
     private String start_location;
-    private String date;
-    private String time;
+    private String start_date_time;
+    private String end_location;
+    private double total_amount;
+    private String end_date_time;
+    private String status;
+
 }

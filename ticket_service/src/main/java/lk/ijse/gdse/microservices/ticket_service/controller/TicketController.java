@@ -1,5 +1,6 @@
 package lk.ijse.gdse.microservices.ticket_service.controller;
 
+import lk.ijse.gdse.microservices.ticket_service.dto.PaymentDTO;
 import lk.ijse.gdse.microservices.ticket_service.dto.TicketDTO;
 import lk.ijse.gdse.microservices.ticket_service.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +27,9 @@ public class TicketController {
         ticketService.addTicket(ticketDTO);
     }
 
-    @PatchMapping
-    public void updateTicketDetails(@RequestBody TicketDTO ticketDTO) {
-        ticketService.updateTicket(ticketDTO);
+    @PutMapping("/updateStatus")
+    public void updateTicketDetails(@RequestBody PaymentDTO paymentDTO) {
+        System.out.println(paymentDTO);
+        ticketService.updateTicket(paymentDTO);
     }
 }
