@@ -1,9 +1,8 @@
-package lk.ijse.gdse.microservices.ticket_service.dto;
+package lk.ijse.gdse.microservices.payment_service.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.util.Date;
 
 @Data
 @AllArgsConstructor
