@@ -17,19 +17,19 @@ public class VehicleController {
     @Autowired
     private  VehicleService vehicleService;
 
-    @GetMapping(value = "/getVehicles",produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public List<VehicleDTO> getVehicleDetails() {
         return vehicleService.getAllVehicles();
     }
 
-    @PostMapping(value = "/registerVehicle",consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void   registerVehicle(@RequestBody VehicleDTO vehicleDTO) {
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void registerVehicle(@RequestBody VehicleDTO vehicleDTO) {
         vehicleService.registerVehicle(vehicleDTO);
         System.out.println("registerVehicle"    + vehicleDTO);
     }
 
-    @PatchMapping(value = "/updateVehicle",consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void   updateVehicle(@RequestBody VehicleDTO vehicleDTO) {
+    @PatchMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void updateVehicle(@RequestBody VehicleDTO vehicleDTO) {
         vehicleService.updateVehicle(vehicleDTO);
     }
 }

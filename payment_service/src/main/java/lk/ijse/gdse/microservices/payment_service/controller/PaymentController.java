@@ -1,4 +1,4 @@
-package lk.ijse.gdse.microservices.payment_service;
+package lk.ijse.gdse.microservices.payment_service.controller;
 
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
