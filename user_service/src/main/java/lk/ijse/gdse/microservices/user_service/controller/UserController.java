@@ -4,6 +4,7 @@ import lk.ijse.gdse.microservices.user_service.dto.UserDTO;
 import lk.ijse.gdse.microservices.user_service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -17,12 +18,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public List<UserDTO> getUsers() {
         return userService.getAllUser();
     }
 
-    @PostMapping
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public void registerUser(@RequestBody UserDTO userDTO) {
         userService.registerUser(userDTO);
     }
